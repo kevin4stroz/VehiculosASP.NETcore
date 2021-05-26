@@ -1,0 +1,42 @@
+
+
+<div class="example-container">
+
+  <form [formGroup]="vehiculoForm" (ngSubmit)="onFormSubmit()">
+
+
+        <mat-form-field class="example-full-width">
+        <mat-label>Modelo</mat-label>
+          <input matInput formControlName="modelo" [errorStateMatcher]="matcher">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Cilindraje</mat-label>
+          <input matInput formControlName="cilindraje" [errorStateMatcher]="matcher">
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Año</mat-label>
+          <input matInput formControlName="agno" [errorStateMatcher]="matcher">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Marca</mat-label>
+          <input matInput formControlName="marcaId" [errorStateMatcher]="matcher">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tipo de vehiculo</mat-label>
+          <input matInput formControlName="tipoVehiculoId" [errorStateMatcher]="matcher">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">
+          Crear vehiculo!
+          <mat-icon>save</mat-icon>
+        </button>
+
+  </form>
+</div>
+
+

@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <span>Prueba tecnica - Kevin Astroz</span>
+
+  <span class="example-spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="btnClick1();">
+    Lista de vehiculos
+  </button>
+
+  <button mat-menu-item (click)="btnClick2();">
+    Crear un nuevo vehiculo
+  </button>
+</mat-menu>
+
+
+<router-outlet></router-outlet>

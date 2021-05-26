@@ -1,0 +1,42 @@
+<h1>Lista de vehiculos</h1>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- vehiculoId Column -->
+  <ng-container matColumnDef="ID Vehiculo">
+    <th mat-header-cell *matHeaderCellDef> ID Vehiculo </th>
+    <td mat-cell *matCellDef="let element"> {{element.vehiculoId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Modelo">
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
+    <td mat-cell *matCellDef="let element"> {{element.modelo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Cilindraje">
+    <th mat-header-cell *matHeaderCellDef> Cilindraje </th>
+    <td mat-cell *matCellDef="let element"> {{element.cilindraje}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Año">
+    <th mat-header-cell *matHeaderCellDef> Año </th>
+    <td mat-cell *matCellDef="let element"> {{element.agno}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Marca">
+    <th mat-header-cell *matHeaderCellDef> Marca </th>
+    <td mat-cell *matCellDef="let element"> {{element.marca.nombre}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Tipo de vehiculo">
+    <th mat-header-cell *matHeaderCellDef> Tipo de vehiculo </th>
+    <td mat-cell *matCellDef="let element"> {{element.tipoVehiculo.nombreTipoVeh}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

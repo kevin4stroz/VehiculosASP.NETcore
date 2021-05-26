@@ -1,0 +1,17 @@
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 20px;
+}
+
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
